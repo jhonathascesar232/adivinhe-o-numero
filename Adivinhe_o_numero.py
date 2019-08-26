@@ -3,8 +3,7 @@ from random import randint
 
 def dificuldade():
         nivel = 0
-        print("""
-**
+        print("""**
 ** Escolha o nivél:
 **
 ** 1 - Fácil
@@ -27,6 +26,7 @@ def dificuldade():
                         nivel = 0
                         break
                 else:
+                        print("**")
                         print("** Opção inválida!. Tente Novamente.")
                         op = int(input("** --> "))
         return nivel
@@ -47,16 +47,17 @@ def run():
                         break
 
                 cont -= 1
-                
-                print("\n** PONTOS --> {}\t TENTATIVA --> {}".format(PONTOS, tentativas))
+                print("**")
+                print("** PONTOS --> {}\t TENTATIVA --> {}".format(PONTOS, tentativas))
                 chute = int(input("** Chute um número: "))
                 
                 if (tentativas == nivel):
+                        print("**")
                         print("** Você PERDEU.")
                         break
                         
                 if (chute == numero_sorteado):
-                        print("\n**")
+                        print("**")
                         print("** Parabéns VOCÊ acertou o número")
                         print("** O número sorteado foi {}".format(numero_sorteado))
                         print("** Você acertou em {} tentativas.".format(tentativas))
@@ -64,13 +65,15 @@ def run():
                 elif (chute > numero_sorteado):
                         diferenca = chute - numero_sorteado
                         PONTOS -= diferenca
-                        print("\n** Você ERROU. Faltam {} tentativas.".format(cont))
+                        print("**")
+                        print("** Você ERROU. Faltam {} tentativas.".format(cont))
                         print("** Tente novamente.")
                         print("** SEU NÚMERO É MAIOR DO QUE O NÚMERO SORTEADO!")
                 elif (chute < numero_sorteado):
                         diferenca = numero_sorteado - chute
                         PONTOS -= diferenca
-                        print("\n** Você ERROU. Faltam {} tentativas.".format(cont))
+                        print("**")
+                        print("** Você ERROU. Faltam {} tentativas.".format(cont))
                         print("** Tente novamente.")
                         print("** SEU NÚMERO É MENOR DO QUE O NÚMERO SORTEADO!")
 
@@ -79,21 +82,22 @@ def run():
 
 
 def main():
-        print("""
-** Iniciar jogo?
+        print("""** Iniciar jogo?
 ** (y/n)
 **""")
         op = input("** -->: ")
         while True:
                 if (op == "n"):
-                        print("\n** FIM da execução...")
+                        print("**")
+                        print("** FIM da execução...")
                         break
                 elif (op == "y"):
                         run()
                 else:
-                        print("\n** Valores POSSIVEIS \n** ( y/n )")
-                print("""
-** Quer continuar jogando?
+                        print("**")
+                        print("** Valores POSSIVEIS \n** ( y/n )")
+                print("**")
+                print("""** Quer continuar jogando?
 ** (y) --> SIM
 ** (n) --> NÂO
 **""") 
