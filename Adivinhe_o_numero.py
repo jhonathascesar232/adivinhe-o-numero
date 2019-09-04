@@ -40,15 +40,16 @@ def run():
         cont = nivel
         PONTOS = 1000
         msn = ""
+        print("** PONTOS --> {}".format(PONTOS))
 
         while True:
-                
+        
                 if (nivel == 0):
                         break
 
                 cont -= 1
                 print("**")
-                print("** PONTOS --> {}\t TENTATIVA --> {}".format(PONTOS, tentativas))
+                print("** TENTATIVA --> {}".format(tentativas))
                 chute = int(input("** Chute um número: "))
                 
                 if (tentativas == nivel):
@@ -59,7 +60,6 @@ def run():
                 if (chute == numero_sorteado):
                         print("**")
                         print("** Parabéns VOCÊ acertou o número")
-                        print("** O número sorteado foi {}".format(numero_sorteado))
                         print("** Você acertou em {} tentativas.".format(tentativas))
                         break
                 elif (chute > numero_sorteado):
@@ -77,8 +77,10 @@ def run():
                         print("** Tente novamente.")
                         print("** SEU NÚMERO É MENOR DO QUE O NÚMERO SORTEADO!")
 
-                
                 tentativas += 1
+
+        print("** PONTOS --> {}".format(PONTOS))
+        print("** O número sorteado foi {}".format(numero_sorteado))
 
 
 def main():
